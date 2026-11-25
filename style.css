@@ -1,0 +1,222 @@
+/* box-sizing at the very top */
+* {
+  box-sizing: border-box;
+}
+
+/* CSS Variables (at least 3 colors) */
+:root {
+  --brand: #ea4b2c;
+  --bg: #f6f4f1;
+  --surface: #ffffff;
+  --text: #1b1714;
+  --border: #dddddd;
+}
+
+/* Dark mode class toggled by JS */
+body.dark {
+  --bg: #171311;
+  --surface: #221d1a;
+  --text: #f6f1ec;
+  --border: #3a332e;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s, color 0.25s;
+}
+
+/* Flexbox for header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 24px;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: var(--brand);
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--brand);
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+main {
+  max-width: 960px;
+  width: 90%;
+  margin: 24px auto;
+}
+
+/* Box model on cards/sections */
+.card {
+  background-color: var(--surface);
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin: 0 auto 24px;
+}
+
+.about-layout {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.about-layout img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+.highlight {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 10px;
+  text-align: left;
+}
+
+.lists-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Grid for projects section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.project-card {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+iframe {
+  width: 100%;
+  max-width: 560px;
+  border: 0;
+}
+
+/* Form styling */
+form {
+  width: 50%;
+  min-width: 280px;
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inline-group {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+input,
+select,
+textarea {
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* :focus on form inputs */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--brand);
+}
+
+button {
+  padding: 8px 14px;
+  border: 1px solid var(--brand);
+  background-color: var(--brand);
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid var(--border);
+}
+
+/* Phone layout: one column under 700px */
+@media (max-width: 700px) {
+  .projects-grid,
+  .lists-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  form {
+    width: 100%;
+  }
+}

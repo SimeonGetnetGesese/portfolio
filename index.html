@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simeon Getnet: Portfolio</title>
+  <meta name="description" content="Personal portfolio of Simeon Getnet, Frontend &amp; Mobile App Engineering student.">
+  <meta name="author" content="Simeon Getnet">
+  <meta name="theme-color" content="#ea4b2c">
+
+  <!-- Open Graph / Share Preview -->
+  <meta property="og:title" content="Simeon Getnet — Portfolio">
+  <meta property="og:description" content="Frontend &amp; Mobile App Engineering portfolio built with plain HTML, CSS, and JavaScript.">
+  <meta property="og:image" content="https://portfolio-simeon.vercel.app/images/me.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Internal CSS: once in the head -->
+  <style>
+    .note {
+      font-style: italic;
+      border-left: 3px solid var(--brand);
+      padding-left: 12px;
+    }
+  </style>
+
+  <!-- External CSS: main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- External JS: main script with defer -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Simeon Getnet</h1>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <!-- Inline JS: once, with a comment -->
+      <button type="button" onclick="alert('Hi! Welcome to Simeon Getnet\'s portfolio.')">Say Hi</button>
+      <button type="button" id="theme-btn">Dark Mode</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <div class="about-layout">
+        <figure>
+          <img src="images/me.jpg" alt="Portrait of Simeon Getnet" width="240" height="240">
+          <figcaption>Simeon Getnet</figcaption>
+        </figure>
+        <div>
+          <p>
+            Hello! I am <strong>Simeon Getnet</strong>, a developer passionate about building
+            <em>fast, accessible, and clean</em> web and mobile applications.
+          </p>
+          <p>
+            Currently focusing on plain <strong> <abbr title="HyperText Markup Language">HTML</abbr>, CSS, and JavaScript</strong> fundamentals.<br>
+            I write and test with VS Code.
+            daily since <time datetime="2026-11">November 2026</time>.
+          </p>
+          <!-- Inline CSS: once, with a comment -->
+          <p style="color: gray;">Built with zero frameworks.</p>
+          <p class="note">Check out my code on <a href="https://github.com/simeongetnet" target="_blank" rel="noopener">GitHub</a>.</p>
+        </div>
+      </div>
+      <hr>
+      <p>Listen to a quick audio intro:</p>
+      <audio controls>
+        <source src="intro.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="card">
+      <h2>Skills &amp; Learning Path</h2>
+
+      <table>
+        <caption>Technical Skills</caption>
+        <thead>
+          <tr>
+            <th scope="col">Skill</th>
+            <th scope="col">Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML5</td>
+            <td>Intermediate</td>
+          </tr>
+          <tr>
+            <td>CSS3 (Flexbox &amp; Grid)</td>
+            <td>Intermediate</td>
+          </tr>
+          <tr>
+            <td>JavaScript (DOM &amp; Events)</td>
+            <td>Learning</td>
+          </tr>
+          <tr>
+            <td colspan="2">Next up: React &amp; Mobile App Engineering</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="lists-grid">
+        <div>
+          <h3>Core Tools</h3>
+          <ul id="skills-list">
+            <li>VS Code</li>
+            <li>Git &amp; GitHub</li>
+            <li>Chrome DevTools</li>
+          </ul>
+          <button type="button" id="add-skill-btn">Add "Vercel" to list</button>
+        </div>
+
+        <div>
+          <h3>My Build Steps</h3>
+          <ol>
+            <li>Write semantic HTML</li>
+            <li>Style with CSS variables &amp; Grid</li>
+            <li>Add interactivity with JavaScript</li>
+          </ol>
+        </div>
+
+        <div>
+          <h3>Quick Glossary</h3>
+          <dl>
+            <dt>DOM</dt>
+            <dd>Document Object Model — the browser's live tree of your HTML.</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets — controls layout, colors, and typography.</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Portfolio — The Old Way</h3>
+          <figure>
+            <img src="images/project-1.png" alt="Screenshot of Simeon's plain HTML portfolio" width="400" height="250" loading="lazy">
+            <figcaption>Single-page portfolio using semantic HTML, CSS Grid, and vanilla JS.</figcaption>
+          </figure>
+          <p>A lightweight, responsive site deployed directly to <span class="highlight">Vercel</span>.</p>
+        </article>
+
+        <article class="project-card">
+          <h3>Interactive Card Maker</h3>
+          <figure>
+            <img src="images/project-2.png" alt="Screenshot of the interactive Card Maker app" width="400" height="250" loading="lazy">
+            <figcaption>Real-time profile card generator built with DOM events.</figcaption>
+          </figure>
+          <p>Updates card text, color, and skill badges live as you type.</p>
+        </article>
+      </div>
+
+      <h3>Featured Video</h3>
+      <iframe
+        src="https://www.youtube.com/embed/UB1O30fR-EE"
+        title="HTML Crash Course"
+        width="560"
+        height="315"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <!-- ASIDE -->
+    <aside class="card">
+      <h2>Favorite Quote</h2>
+      <blockquote>
+        "Make it work, make it right, make it fast." — Kent Beck
+      </blockquote>
+    </aside>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="card">
+      <h2>Contact Me</h2>
+      <p>Live greeting preview: <strong id="live-preview">Hello, visitor!</strong></p>
+
+      <form id="contact-form">
+        <fieldset>
+          <legend>Send a Message</legend>
+
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required minlength="2">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+          <label for="date">Preferred Meeting Date</label>
+          <input id="date" name="date" type="date">
+
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="project">Project Collaboration</option>
+            <option value="hiring">Job Opportunity</option>
+            <option value="other">Just Saying Hi</option>
+          </select>
+
+          <fieldset class="inline-group">
+            <legend>Interests</legend>
+            <label for="interest-web"><input id="interest-web" type="checkbox" name="interest" value="web"> Web Dev</label>
+            <label for="interest-mobile"><input id="interest-mobile" type="checkbox" name="interest" value="mobile"> Mobile Apps</label>
+          </fieldset>
+
+          <fieldset class="inline-group">
+            <legend>Preferred Contact Method</legend>
+            <label for="method-email"><input id="method-email" type="radio" name="contact-method" value="email" checked> Email</label>
+            <label for="method-phone"><input id="method-phone" type="radio" name="contact-method" value="phone"> Phone</label>
+          </fieldset>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required minlength="10" placeholder="Write your message here..."></textarea>
+
+          <button type="submit">Send Message</button>
+        </fieldset>
+      </form>
+      <p id="form-status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <small>&copy; 2026 Simeon Getnet. All rights reserved.</small>
+    </p>
+    <p>
+      <a href="mailto:simeon.getnet@example.com">simeon.getnet@example.com</a> |
+      <a href="tel:+251900000000">+251 900 000 000</a>
+    </p>
+  </footer>
+
+  <!-- Internal JS: at the end of body -->
+  <script>
+    console.log('Internal JS loaded inside index.html');
+  </script>
+</body>
+</html>
