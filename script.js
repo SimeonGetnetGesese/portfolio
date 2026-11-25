@@ -23,13 +23,13 @@ nameInput.addEventListener('input', () => {
   livePreview.textContent = typedName ? `Hello, ${typedName}!` : 'Hello, visitor!';
 });
 
-// 3. Add an element (create, fill, append)
-addSkillBtn.addEventListener('click', () => {
-  const li = document.createElement('li');
-  li.textContent = 'Vercel';
-  skillsList.append(li);
-  addSkillBtn.disabled = true;
-  addSkillBtn.textContent = 'Added!';
+// 3. Visit 'https://github.com/SimeonGetnetGesese';
+const githubBtn = document.querySelector('#github-btn');
+
+githubBtn.addEventListener('click', () => {
+  // Opens in a new tab
+  window.open('https://github.com/SimeonGetnetGesese', '_blank', 'noopener');
+
 });
 
 // 4. Key press event
